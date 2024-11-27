@@ -6,7 +6,12 @@ for (let i = 0; i < arr.length; i++) {
     sum += arr[i];
   }
 }
-console.log(sum);
+let sumColor =
+  sum >= 0
+    ? `rgb(${Math.abs(sum)}, ${Math.abs(sum)}, ${Math.abs(sum)})`
+    : `rgb(${Math.abs(sum)}, 0, 0)`;
+document.getElementById("sum").innerText = "Сума: " + sum;
+document.getElementById("sum").style.color = sumColor;
 
 let min = Infinity;
 let max = -Infinity;
@@ -21,13 +26,13 @@ for (let i = 0; i < arr.length; i++) {
   }
 }
 
-console.log("Мін:", min, "Макс:", max);
+document.getElementById("min-max").innerText = "Мін: " + min + " Макс: " + max;
 
 let str = "";
 for (let i = 1; i <= 5; i++) {
   str += "#".repeat(i) + "\n";
 }
-console.log(str);
+document.getElementById("triangle").innerText = str;
 
 function checknumber(a, b) {
   return typeof a === "number" && typeof b === "number";
@@ -83,4 +88,16 @@ function findMax(arr) {
     }
   }
   return max;
+}
+function calculate(arr, operation) {
+  if (typeof operation !== "function") {
+    return "Помилка: введіть функцію обчислення";
+  }
+  let result = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (typeof arr[i] === "number") {
+      result = operation(result, arr[i]);
+    }
+  }
+  return result;
 }
