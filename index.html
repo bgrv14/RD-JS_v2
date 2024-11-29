@@ -1,18 +1,27 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
   <head>
-    <title>Document1</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тести Jasmine</title>
+    <!-- Підключення стилів Jasmine -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.10.0/jasmine.min.css"
+    />
   </head>
   <body>
-    <div id="sum"></div>
-    <div id="min-max"></div>
-    <div id="triangle"></div>
-    <div id="numbers"></div>
-    <div id="sum-result"></div>
-    <div id="product-result"></div>
-    <script src="./lesson23.js"></script>
+    <h1>Результати тестів Jasmine</h1>
+
+    <!-- Підключаємо Jasmine через CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.10.0/jasmine.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.10.0/jasmine-html.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.10.0/boot.min.js"></script>
+
+    <!-- Підключення основного коду -->
+    <script src="functions.js"></script>
+
+    <!-- Підключення тестів -->
+    <script src="./test/function.spec.js"></script>
   </body>
 </html>

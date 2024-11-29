@@ -21,7 +21,7 @@ function User(name, age) {
 }
 
 User.prototype.sayHello = function () {
-  return `Hi. My name is ${this.name} and I'm ${this.age} years old`; // додано this до виклику name та виправлено помилку в форматуванні this.age
+  return `Hi. My name is ${this.name} and I'm ${this.age} years old`;
 };
 
 const user = new User("Sherlock", 27);

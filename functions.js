@@ -1,20 +1,16 @@
-////1
+// Масив для тестування
 const arr = [4, 8, 15, 16, 23, 42, 7, 14, null, 96];
 
+// 1. Підсумок чисел в масиві
 let sum = 0;
 for (let i = 0; i < arr.length; i++) {
   if (typeof arr[i] === "number") {
     sum += arr[i];
   }
 }
-let sumColor =
-  sum >= 0
-    ? `rgb(${Math.abs(sum)}, ${Math.abs(sum)}, ${Math.abs(sum)})`
-    : `rgb(${Math.abs(sum)}, 0, 0)`;
-document.getElementById("sum").innerText = "Сума: " + sum;
-document.getElementById("sum").style.color = sumColor;
+console.log(sum);
 
-////2
+// 2. Мінімальне та максимальне значення
 let min = Infinity;
 let max = -Infinity;
 for (let i = 0; i < arr.length; i++) {
@@ -27,17 +23,16 @@ for (let i = 0; i < arr.length; i++) {
     }
   }
 }
+console.log("Мін:", min, "Макс:", max);
 
-document.getElementById("min-max").innerText = "Мін: " + min + " Макс: " + max;
-
-////3
+// 3. Побудова трикутника
 let str = "";
 for (let i = 1; i <= 5; i++) {
   str += "#".repeat(i) + "\n";
 }
-document.getElementById("triangle").innerText = str;
+console.log(str);
 
-////4
+// 4. Математичні функції
 function checknumber(a, b) {
   return typeof a === "number" && typeof b === "number";
 }
@@ -92,16 +87,4 @@ function findMax(arr) {
     }
   }
   return max;
-}
-function calculate(arr, operation) {
-  if (typeof operation !== "function") {
-    return "Помилка: введіть функцію обчислення";
-  }
-  let result = arr[0];
-  for (let i = 1; i < arr.length; i++) {
-    if (typeof arr[i] === "number") {
-      result = operation(result, arr[i]);
-    }
-  }
-  return result;
 }
