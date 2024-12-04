@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #282c34;
+  color: #61dafb;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  border: 2px solid #61dafb;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #20232a;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5em;
+}
+
+#timer {
+  font-size: 24px;
+  color: green;
+  text-align: center;
+}
