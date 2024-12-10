@@ -1,0 +1,100 @@
+/* Загальні стилі */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa; /* Світлий фон */
+  color: #343a40; /* Темний текст */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Стилі для заголовків */
+h2, h4 {
+  color: #495057;
+  border-bottom: 2px solid #dee2e6;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+/* Список користувачів і постів */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 15px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+ul li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+a.link-primary {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a.link-primary:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Кнопки */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #6c757d;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+/* Повідомлення */
+.text-danger {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.text-warning {
+  color: #ffc107;
+  font-weight: bold;
+}
+
+.text-muted {
+  color: #6c757d;
+}
+
+/* Коментарі */
+h4 {
+  margin-top: 40px;
+}
+
+ul li strong {
+  color: #495057;
+}
